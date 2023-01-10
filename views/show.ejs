@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Todos</title>
+    <link rel="stylesheet" href="showsty.css">
+</head>
+<body>
+    <h1>Logged in as <%= guser %></h1> 
+    <ol>
+        <% let x = 0; %> 
+        <% for( let data of showdata[0].todos) { %>
+            <li><%= data %><a href="/remove/<%=x %>">remove</a></li>
+            <% x++; %> 
+        <% }%>
+    </ol>
+    <button><a href="/app">ADD DATA</a></button>
+    <button><a href="/app">Back</a></button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change password</title>
+    <link rel="stylesheet" href="chanegsty.css">
+</head>
+<body>
+    <div>
+        <h1>NOTE :- IF Your Not Logged in you will be redirected to home page</h1>
+        <h2>Your Logged In As <%= guser %> </h2>
+    </div>
+    <form action="/changepassword" method="post">
+        <input type="text" name="username" placeholder="username" required>
+        <input type="text" name="password" placeholder="New Password" required>
+        <button>change</button>
+        <button><a href="/app">Back</a></button>
+    </form>
+</body>
+</html>
